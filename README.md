@@ -1,1 +1,0 @@
-# I103_Homework3_Turkie
