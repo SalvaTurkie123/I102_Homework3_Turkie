@@ -5,9 +5,13 @@
 #include <iostream>
 #include "DatosGenerador.h"
 
+// Crea una clase ConstructorJson que almacene pares clave-valor
+// donde la clave es un string y el valor es un objeto de DatosGenerador<T>.
 class ConstructorJson {
+
 private:
-    std::vector<std::pair<std::string, std::string>> info;
+    std::vector<std::pair<std::string, std::string>> info; // clave-valor
+
 public:
     template<typename T>
     void agregar(const std::string& key, const DatosGenerador<T>& value) {

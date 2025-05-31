@@ -7,6 +7,9 @@
 
 #define PI 3.14
 
+
+//Template class ProcesadorFigura, para usar template specialization
+// Figuras que no son Punto, Circulo, Elipse o Rectangulo
 template<typename T>
 class ProcesadorFigura {
 public:
@@ -16,6 +19,7 @@ public:
     }
 };
 
+// Para puntos, el área es 0
 template<>
 class ProcesadorFigura<Punto> {
 public:
@@ -24,6 +28,7 @@ public:
     }
 };
 
+// Para el circulo, el área se calcula como π * r²
 template<>
 class ProcesadorFigura<Circulo> {
 public:
@@ -32,6 +37,7 @@ public:
     }
 };
 
+// Para la elipse, el área se calcula como π * a * b
 template<>
 class ProcesadorFigura<Elipse> {
 public:
@@ -40,6 +46,7 @@ public:
     }
 };
 
+// Para el rectángulo, el área se calcula como ancho * largo
 template<>
 class ProcesadorFigura<Rectangulo> {
 public:
